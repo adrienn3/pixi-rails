@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PixiRails</title>
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const app = new PIXI.Application({ background: '#1099bb', resizeTo: window });
+
+      document.body.appendChild(app.view);
+
+      const texture = PIXI.Texture.from("<%= asset_path('misery.png') %>");
+      const img = new PIXI.Sprite(texture);
+
+      img.scale.x = 0.20;
+      img.scale.y = 0.20;
+
+      img.anchor.set(0.5);
+      img.x = app.screen.width / 2;
+      img.y = app.screen.height / 2;
+      app.stage.addChild(img);
+
+      img.eventMode = 'dynamic';
+      img.cursor = 'pointer';
+
+      img.on('pointerdown', () => {
+        img.x = Math.random() * app.screen.width;
+        img.y = Math.random() * app.screen.height;
+      });
+
+      app.ticker.add((delta) => {
+          img.rotation += 0.005 * delta;
+      });
+    </script>
+  </body>
+</html>
