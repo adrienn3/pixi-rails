@@ -1,24 +1,11 @@
-# README
+PixiJS in 5 minutes or less
+=============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository houses all of the sample code used to create a simple application to render a browser based game. Tutorial can be found at:
 
-Things you may want to cover:
+TBD
 
-* Ruby version
+### License ###
 
-* System dependencies
+This content is released under the (http://opensource.org/licenses/MIT) MIT License.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
